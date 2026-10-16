@@ -1,0 +1,32 @@
+{
+    "repositories": [
+        {
+            "repositoryArn": "arn:aws:ecr:eu-north-1:<ACCOUNT_ID>:repository/web",
+            "registryId": "<ACCOUNT_ID>",
+            "repositoryName": "web",
+            "repositoryUri": "<ACCOUNT_ID>.dkr.ecr.eu-north-1.amazonaws.com/web",
+            "createdAt": "2026-10-14T13:28:14.283000+06:00",
+            "imageTagMutability": "MUTABLE",
+            "imageScanningConfiguration": {
+                "scanOnPush": false
+            },
+            "encryptionConfiguration": {
+                "encryptionType": "AES256"
+            }
+        },
+        {
+            "repositoryArn": "arn:aws:ecr:eu-north-1:<ACCOUNT_ID>:repository/api",
+            "registryId": "<ACCOUNT_ID>",
+            "repositoryName": "api",
+            "repositoryUri": "<ACCOUNT_ID>.dkr.ecr.eu-north-1.amazonaws.com/api",
+            "createdAt": "2026-10-14T13:28:33.084000+06:00",
+            "imageTagMutability": "MUTABLE",
+            "imageScanningConfiguration": {
+                "scanOnPush": false
+            },
+            "encryptionConfiguration": {
+                "encryptionType": "AES256"
+            }
+        }
+    ]
+}

@@ -1,0 +1,60 @@
+# Captured 2026-10-16T05:32Z from a laptop outside AWS
+
+$ curl -sI http://ahnafanan.site
+HTTP/1.1 301 Moved Permanently
+Server: CloudFront
+Date: Fri, 16 Oct 2026 05:32:55 GMT
+Content-Type: text/html
+Content-Length: 167
+Connection: keep-alive
+Location: https://ahnafanan.site/
+X-Cache: Redirect from cloudfront
+Via: 1.1 1b893d289944e46379df722f37952b6c.cloudfront.net (CloudFront)
+X-Amz-Cf-Pop: CCU50-P6
+Alt-Svc: h3=":443"; ma=86400
+X-Amz-Cf-Id: q2zRFyJ1RoZgkgRd4pQNPDpzIn3DGl3blTT6hv6b560WugC2f0fP-Q==
+
+
+$ curl -sI https://ahnafanan.site
+HTTP/1.1 200 OK
+Content-Type: text/html
+Content-Length: 1042
+Connection: keep-alive
+Date: Fri, 16 Oct 2026 05:32:56 GMT
+Accept-Ranges: bytes
+Server: nginx/1.31.6
+Last-Modified: Wed, 14 Oct 2026 02:38:46 GMT
+ETag: "6aceeb36-412"
+Cache-Control: no-cache
+X-Cache: Miss from cloudfront
+Via: 1.1 9d794390fcb503c24f1f48632406f114.cloudfront.net (CloudFront)
+X-Amz-Cf-Pop: CCU50-P6
+Alt-Svc: h3=":443"; ma=86400
+X-Amz-Cf-Id: hI79BGCLdf5id9cBIvD7pjKzecTqOVhHZMWp5ULatsASwCw9P_PouA==
+
+
+$ curl -s https://ahnafanan.site/api/v1/pricing | head -c 300
+{"success":true,"message":"plans retreieved","data":[{"id":1,"name":"Basic","duration_months":null,"price":29,"features":["Access to gym floor","Locker room access","Free fitness assessment","2 Group classes \/ week"],"is_popular":false,"is_active":true,"created_at":"2026-10-15 05:17:50"},{"id":2,"n
+
+$ curl -sI https://origin.ahnafanan.site --max-time 10
+exit code: 28 (28 = timed out)
+
+$ nslookup ahnafanan.site
+Non-authoritative answer:
+Server:  UnKnown
+Address:  10.15.15.107
+
+Name:    ahnafanan.site
+Addresses:  2600:9000:20c7:f600:d:4dce:1d80:93a1
+	  2600:9000:20c7:5c00:d:4dce:1d80:93a1
+	  2600:9000:20c7:a400:d:4dce:1d80:93a1
+	  2600:9000:20c7:8600:d:4dce:1d80:93a1
+	  2600:9000:20c7:fa00:d:4dce:1d80:93a1
+	  2600:9000:20c7:1800:d:4dce:1d80:93a1
+	  2600:9000:20c7:ec00:d:4dce:1d80:93a1
+	  2600:9000:20c7:d200:d:4dce:1d80:93a1
+	  13.35.20.118
+	  13.35.20.114
+	  13.35.20.19
+	  13.35.20.126
+
