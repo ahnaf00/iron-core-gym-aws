@@ -4,7 +4,7 @@ A Vue 3 + Laravel gym management app, containerised with Docker and deployed on 
 (eu-north-1) behind CloudFront, an Application Load Balancer and private subnets,
 with RDS MySQL. Built and torn down as a hands-on cloud project (October 2026).
 
-▶ Demo video: <!-- TODO: paste the unlisted YouTube or LinkedIn link -->
+▶ Demo video: [media/presentation.mp4](media/presentation.mp4)
 
 ![Architecture](architecture/architecture.png)
 
