@@ -4,27 +4,32 @@ Captured from the live deployment before teardown. Account IDs, emails, endpoint
 
 - `terminal/laptop-checks.txt` — public checks from outside AWS: HTTP→HTTPS redirect, CloudFront headers, the API returning JSON through `/api/*`, the origin timing out for direct access, DNS resolving to CloudFront.
 - `config/` — ECR repository and image listings.
-- `screenshots/` — console screenshots, numbered in the order they tell the story:
+- [`../media/`](../media/) — screenshots from the live site and the AWS console (IDs, ARNs, endpoints and the account blurred), plus the presentation video:
 
-| # | File | Shows |
-|---|---|---|
-| 01 | site-home.png | The live site over HTTPS |
-| 02 | site-admin.png | Admin dashboard after login |
-| 03 | route53-records.png | Hosted zone records |
-| 04 | acm-certs.png | Certificates in us-east-1 and eu-north-1, both Issued |
-| 05 | cloudfront-general.png | Alternate domains, certificate, WAF |
-| 06 | cloudfront-behaviors.png | `/api/*`, `/sanctum/*`, Default |
-| 07 | cloudfront-origin.png | Origin `origin.ahnafanan.site`, HTTPS only |
-| 08 | alb-listeners.png | HTTPS:443, HTTP:80 redirect |
-| 09 | target-health.png | Target healthy |
-| 10 | sg-alb.png | 443 from the CloudFront prefix list only |
-| 11 | sg-ec2.png | 80 from the ALB security group only |
-| 12 | sg-rds.png | 3306 from the EC2 security group only |
-| 13 | vpc-resource-map.png | VPC resource map |
-| 14 | nat.png | NAT Gateway and the private route table |
-| 15 | ec2-instance.png | Private subnet, no public IPv4, IAM role |
-| 16 | ssm-session.png | Session Manager running `sudo docker ps` |
-| 17 | rds.png | Publicly accessible: No |
-| 18 | ecr.png | Repositories `web` and `api` |
-| 19 | parameter-store.png | `/lab/db/*` names only |
-| 20 | iam-role.png | Instance role permissions |
+- [01-website-home.png](../media/01-website-home.png)
+- [02-website-class-schedule.png](../media/02-website-class-schedule.png)
+- [03-admin-login-redacted.png](../media/03-admin-login-redacted.png)
+- [04-admin-dashboard.png](../media/04-admin-dashboard.png)
+- [05-admin-members.png](../media/05-admin-members.png)
+- [06-admin-trainers.png](../media/06-admin-trainers.png)
+- [07-admin-pricing.png](../media/07-admin-pricing.png)
+- [08-route53-hosted-zone-records.png](../media/08-route53-hosted-zone-records.png)
+- [09-acm-certificate-issued.png](../media/09-acm-certificate-issued.png)
+- [10-cloudfront-distribution-list.png](../media/10-cloudfront-distribution-list.png)
+- [11-cloudfront-behaviors.png](../media/11-cloudfront-behaviors.png)
+- [12-cloudfront-waf-security.png](../media/12-cloudfront-waf-security.png)
+- [13-alb-listeners-and-rules.png](../media/13-alb-listeners-and-rules.png)
+- [14-alb-security-group.png](../media/14-alb-security-group.png)
+- [15-target-group-health.png](../media/15-target-group-health.png)
+- [16-vpc-details.png](../media/16-vpc-details.png)
+- [17-vpc-resource-map.png](../media/17-vpc-resource-map.png)
+- [18-nat-gateway.png](../media/18-nat-gateway.png)
+- [19-ec2-instance-private.png](../media/19-ec2-instance-private.png)
+- [20-ec2-instance-details.png](../media/20-ec2-instance-details.png)
+- [21-session-manager-connect.png](../media/21-session-manager-connect.png)
+- [22-session-manager-docker-ps.png](../media/22-session-manager-docker-ps.png)
+- [23-ecr-repositories.png](../media/23-ecr-repositories.png)
+- [24-rds-summary.png](../media/24-rds-summary.png)
+- [25-rds-connectivity.png](../media/25-rds-connectivity.png)
+- [26-rds-security-group-rules.png](../media/26-rds-security-group-rules.png)
+- [27-curl-https-test.png](../media/27-curl-https-test.png)
