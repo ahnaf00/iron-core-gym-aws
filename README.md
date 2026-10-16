@@ -305,12 +305,47 @@ More terminal output and ECR listings: [evidence/](evidence/)
 ```
 .
 ├── architecture/
-│   ├── architecture.drawio   # editable diagram source
-│   ├── architecture.png      # rendered diagram
-│   └── request-flow.md       # step-by-step request path
-├── evidence/                 # terminal checks and ECR listings
-├── media/                    # screenshots and demo video
-├── teardown.md               # how the environment was deleted
+│   ├── architecture.drawio               # editable diagram source
+│   ├── architecture.png                  # rendered diagram
+│   └── request-flow.md                   # step-by-step request path
+├── evidence/
+│   ├── README.md                         # index of the evidence
+│   ├── config/
+│   │   ├── ecr-repositories.json         # ECR repository listing
+│   │   ├── ecr-images-web.json           # images in the web repository
+│   │   └── ecr-images-api.json           # images in the api repository
+│   └── terminal/
+│       └── laptop-checks.txt             # public HTTPS/DNS/origin checks from outside AWS
+├── media/
+│   ├── presentation.mp4                  # demo video
+│   ├── 01-website-home.png               # live application
+│   ├── 02-website-class-schedule.png
+│   ├── 03-admin-login-redacted.png
+│   ├── 04-admin-dashboard.png
+│   ├── 05-admin-members.png
+│   ├── 06-admin-trainers.png
+│   ├── 07-admin-pricing.png
+│   ├── 08-route53-hosted-zone-records.png  # DNS, TLS and edge
+│   ├── 09-acm-certificate-issued.png
+│   ├── 10-cloudfront-distribution-list.png
+│   ├── 11-cloudfront-behaviors.png
+│   ├── 12-cloudfront-waf-security.png
+│   ├── 13-alb-listeners-and-rules.png    # load balancer
+│   ├── 14-alb-security-group.png
+│   ├── 15-target-group-health.png
+│   ├── 16-vpc-details.png                # networking
+│   ├── 17-vpc-resource-map.png
+│   ├── 18-nat-gateway.png
+│   ├── 19-ec2-instance-private.png       # compute and containers
+│   ├── 20-ec2-instance-details.png
+│   ├── 21-session-manager-connect.png
+│   ├── 22-session-manager-docker-ps.png
+│   ├── 23-ecr-repositories.png
+│   ├── 24-rds-summary.png                # database
+│   ├── 25-rds-connectivity.png
+│   ├── 26-rds-security-group-rules.png
+│   └── 27-curl-https-test.png            # end-to-end verification
+├── teardown.md                           # how the environment was deleted
 └── README.md
 ```
 
